@@ -1,0 +1,335 @@
+<div class="candidate-profile">
+    <div class="top-content">
+        <div class="topleft-panel">
+            <div class="top-nav">
+                <div class="nav-left">
+                    <span class="breadcrumb"><strong>Candidates</strong></span>
+                    <span class="breadcrumb-separator"><strong>></strong></span>
+                    <span class="breadcrumb2"><strong>Robert Hardy</strong></span>
+                    <span class="breadcrumb-id btn btn-outline">ID - 231</span>
+                </div>
+                <div class="nav-center">
+                    <button class="nav-btn secondary"><strong>Request Profile Update</strong></button>
+                    <button class="nav-btn secondary"><strong>Previous</strong></button>
+                    <button class="nav-btn secondary"><strong>Next</strong></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="topright-panel">
+            <div class="nav-right">
+                <div class="rightop-nav">
+                    <button class="icon-btn"><i class="bx bx-note icon-Color"></i></button>
+                    <button class="icon-btn"><i class="bx bx-phone icon-Color"></i></button>
+                    <button class="icon-btn"><i class="bx bx-check-circle icon-Color"></i></button>
+                    <button class="icon-btn"><i class="bx bx-calendar-event icon-Color"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="left-panel">
+            <div class="profile-header">
+                <div class="profile-left">
+                    <div class="avatar-container">
+                        <div class="avatar">
+                            <span class="avatar-initial"><i class='bx  bxs-user avatarColor'></i> </span>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="name-row">
+                            <h1 class="candidate-name">{{ candidateState.candidate().name }}</h1>
+                            <div class="verification-badges">
+                                <span class="badge facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                                <span class="badge twitter"><i class="fa-brands fa-twitter"></i></span>
+                                <span class="badge linkedin"><i class="fa-brands fa-linkedin-in"></i></span>
+                                <span class="badge pinterest"><i class="fa-brands fa-github"></i></span>
+                                <span class="badge instagram"></span>
+                            </div>
+                        </div>
+                        <div class="position-info">
+                            <span class="position">{{candidate.position}}</span>
+                            <span class="location">{{candidate.location}}</span>
+                            <span class="city">{{candidate.city}}</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="profile-right">
+
+                    <div class="header-actions">
+                        <span class="contact-linked-badge">Contact Linked</span>
+                        <button class="action-btn star"><i class="bx bx-star"></i></button>
+                        <button class="action-btn notification"><i class="fa-solid fa-fire-flame-curved"></i></button>
+                        <button class="action-btn edit" (click)="openEditModal()">
+                            <i class="bx bx-pencil"></i>
+                        </button>
+                        <button class="action-btn more"><i class="bx bx-dots-vertical-rounded"></i></button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="profile-header">
+                <div class="profile-left">
+                    <div class="contact-row">
+                        <i class="bx bx-envelope"></i><span
+                            class="email-link">{{candidateState.candidate().email}}</span>
+                        <i class="bx bx-phone"></i><span class="phone">{{candidateState.candidate().phone}}</span>
+                    </div>
+                </div>
+                <div class="profile-right">
+                    <div class="status-info">
+                        <div class="assignee-info">
+                            <i class="bx  bx-user-circle"></i>
+                            <span class="assignee-name"><strong>Phyllis Yang</strong></span>
+                            <span class="date-time"><i class="bx bx-time"></i> &nbsp;<strong>Jul 14,
+                                    2023, 4:04 pm</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="info-section">
+                <div class="info-grid">
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Current Organization</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().currentOrganization}}</div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-label">Summary</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().summary}}</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Skills</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().skills}}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Current Employment Status</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().currentEmploymentStatus}}</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Available From</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().availableFrom}}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Date of Birth</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().dateOfBirth}}</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Current Salary</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().currentSalary}}</div>
+
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Relevent Experience</div>
+
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().relevantExperience}}</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Notice Period</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().noticePeriod}}</div>
+
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Salary Expectation</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().salaryExpectation}}</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Full Address</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().fullAddress}}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Status</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().status}}</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Resume</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().resume}}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Salary Type</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().salaryType}}</div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-item">
+                            <div class="info-label">Total Experience</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().totalExperience}}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Language Skills</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-value">{{candidateState.candidate().languageSkills}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-tabs">
+                <div class="tab-list">
+                    <button class="tab-item" [class.active]="activeTab === 'allDetails'"
+                        (click)="setActiveTab('allDetails')">All Details</button>
+                    <button class="tab-item" [class.active]="activeTab === 'assignedJobs'"
+                        (click)="setActiveTab('assignedJobs')">Assigned Jobs</button>
+                    <button class="tab-item" [class.active]="activeTab === 'relatedEmails'"
+                        (click)="setActiveTab('relatedEmails')">Related Emails</button>
+                    <button class="tab-item" [class.active]="activeTab === 'candidateQuestions'"
+                        (click)="setActiveTab('candidateQuestions')">Candidate Questions</button>
+                    <button class="tab-item" [class.active]="activeTab === 'hotlists'"
+                        (click)="setActiveTab('hotlists')">Hotlists</button>
+                    <button class="tab-item" [class.active]="activeTab === 'relatedDeals'"
+                        (click)="setActiveTab('relatedDeals')">Related Deals</button>
+                    <button class="tab-item" [class.active]="activeTab === 'contactsPitched'"
+                        (click)="setActiveTab('contactsPitched')">Contact(s) Pitched</button>
+                </div>
+
+
+
+                <div class="assigned-jobs-container">
+                    <div class="jobs-header">
+                        <h3 class="jobs-title">Assigned Job to {{ candidateState.candidate().name }}</h3>
+                        <div class="jobs-actions">
+                            <button class="btn btn-primary" (click)="assignToJob()">
+                                Assign To Job
+                            </button>
+                            <button class="btn btn-outline" (click)="viewAllJobs()">
+                                View All Assigned Jobs
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="jobs-list">
+                        <div class="job-item" *ngFor="let job of assignedJobs; trackBy: trackByJobId">
+                            <div class="job-avatar">
+                                <span class="job-initial">{{ job.initial }}</span>
+                            </div>
+
+                            <div class="job-details">
+                                <div class="job-title">{{ job.title }}</div>
+                                <div class="job-company">{{ job.company }}</div>
+                            </div>
+
+                            <div class="job-candidate">
+                                <div class="candidate-info">
+                                    <div class="candidate-icons">
+                                        <i class="bx  bx-user-circle"></i>
+                                        <i class="bx bx-time"></i>
+                                    </div>
+                                    <div class="candidate-details">
+                                        <span class="candidate-name">{{ job.candidateName }}</span>
+                                        <div class="job-date">{{ job.assignedDate }}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="job-status">
+                                <span class="status-badge" [class]="'status-' + job.status.toLowerCase()">
+                                    {{ job.status }}
+                                </span>
+                            </div>
+                            <div class="job-actions">
+                                <button class="btn btn-outline-small" (click)="viewFiles(job.id)">
+                                    View Files
+                                </button>
+                                <div class="toggle-switch" [class.active]="job.isActive" (click)="toggleJob(job.id)">
+                                    <div class="toggle-slider"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="right-tabs">
+                <button class="right-tab active">All</button>
+                <button class="right-tab">Notes & Calls</button>
+                <button class="right-tab">Tasks</button>
+                <button class="right-tab">Meeting</button>
+                <button class="right-tab">Files</button>
+            </div>
+
+
+            <div class="notes-content">
+                <div class="note-item" *ngFor="let note of notes">
+                    <div class="note-header">
+                        <i class="fa-regular fa-note-sticky icon-size author-icon1"></i>
+                        <span class="note-type">{{note.type}}</span>
+                        <span class="note-status">To Do</span>
+                    </div>
+                    <div class="note-body">
+                        <p class="note-text">{{note.content}}</p>
+                        <div class="note-associations">
+                            <span class="associations-link"><strong>{{note.associations}} Association(s)</strong></span>
+                        </div>
+                        <div class="note-footer">
+                            <div class="note-author">
+                                <i class="bx  bx-user-circle author-icon"></i>
+                                <span class="author-name">{{note.author}}</span>
+                            </div>
+                            <span class="note-date"><i class="bx bx-time"></i>
+                                &nbsp;{{note.date}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-edit-candidate *ngIf="showEditModal" [isOpen]="showEditModal" (closeEvent)="closeEditModal()">
+    </app-edit-candidate>
+</div>

@@ -1,0 +1,15 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.main-content {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  margin-left: 70px;
+}
+
+.app-layout.sidebar-expanded .main-content {
+  margin-left: 220px;
+}

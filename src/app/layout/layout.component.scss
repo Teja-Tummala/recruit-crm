@@ -1,0 +1,41 @@
+:root {
+  --sidebar-w: 72px;
+  --sidebar-w-collapsed: 56px;
+  --topbar-h: 64px;
+  --bg: #f5f7fb;
+  --navy: #0e3a6f;
+  --border: #e5e7eb;
+  --text: #1f2937;
+}
+
+.shell {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-rows: var(--topbar-h) 1fr;
+  background: var(--bg);
+}
+
+.shell.sidebar-collapsed {
+  grid-template-columns: var(--sidebar-w-collapsed) 1fr;
+}
+
+.sidebar {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+}
+
+.topbar {
+  grid-row: 1;
+  grid-column: 2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main {
+  grid-row: 2;
+  grid-column: 2;
+  padding: 16px;
+  overflow: auto;
+}

@@ -1,0 +1,195 @@
+.sidebar {
+  width: 64px;
+  height: 100vh;
+  background: var(--sidebar);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-section {
+  padding-top: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo i {
+  font-size: 20px;
+  color: white;
+  margin: 0px;
+}
+
+.search-container {
+  width: 100%;
+  padding: 0 8px;
+}
+
+.search-box {
+  position: relative;
+  width: 48px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-box:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-box i {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-box input {
+  display: none;
+}
+
+.nav-menu {
+  flex: 1;
+  width: 100%;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-item {
+  width: 48px;
+  height: 48px;
+  margin: 0 8px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.menu-item.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.menu-item.active::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 24px;
+  background: white;
+  border-radius: 0 2px 2px 0;
+}
+
+.menu-item i {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.menu-item span {
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1;
+  opacity: 0;
+  display: none;
+}
+
+.bottom-section {
+  width: 100%;
+  padding: 8px 0 16px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar:hover {
+  width: 240px;
+  z-index: 1001;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar:hover .search-box {
+  width: calc(100% - 16px);
+  justify-content: flex-start;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.sidebar:hover .search-box input {
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  flex: 1;
+}
+
+.sidebar:hover .search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar:hover .menu-item {
+  width: auto;
+  height: 40px;
+  margin: 0 8px;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 12px;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+.sidebar:hover .menu-item i {
+  margin-bottom: 0;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+.sidebar:hover .menu-item span {
+  font-size: 14px;
+  opacity: 1;
+  display: block;
+}
+
+
+.sidebar:hover .search-container {
+  padding: 0 12px;
+}

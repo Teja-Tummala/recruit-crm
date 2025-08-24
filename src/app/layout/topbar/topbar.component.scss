@@ -1,0 +1,80 @@
+.top {
+  height: 64px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.icon-color{
+    color: #1170CA;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  display: grid; place-items: center;
+  cursor: pointer;
+}
+
+.icon-btn1 {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #1170CA;
+  color: white;
+  display: grid; place-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex; align-items: center; gap: 8px; margin-right: 8px;
+}
+.logo-dot {
+  width: 14px; height: 14px; border-radius: 50%; background: #2a79ff;
+}
+.logo-text {
+  font-weight: 700; color: #1f2937; letter-spacing: .4px;
+}
+
+.search {
+  width: 360px; height: 38px;
+  display: flex; align-items: center; gap: 10px;
+  border: none; border-radius: 10px;
+  padding: 0 12px;
+}
+
+.vertical-line {
+    border-left: 2px solid #ccc; 
+    height: 31px;
+}
+
+.assignee-info {
+  align-items: center;
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.right { display: flex; align-items: center; gap: 10px; }
+
+.circle {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1px solid #e5e7eb; background: #fff; display: grid; place-items: center;
+  cursor: pointer;
+}
+
+.user { display: flex; align-items: center; gap: 10px; margin-left: 6px; }
+.user img { width: 36px; height: 36px; border-radius: 50%; }
+.user .meta { line-height: 1.1; }
+.user .name { font-weight: 600; color: #111827; }
+.user .org { font-size: 12px; color: #6b7280; }
