@@ -8,7 +8,7 @@ import { TopbarComponent } from "./layout/topbar/topbar.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SidebarComponent, CommonModule, TopbarComponent],
+  imports: [RouterOutlet, SidebarComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
   
